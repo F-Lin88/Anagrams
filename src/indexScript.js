@@ -19,7 +19,16 @@ document.getElementById("challenge-game-button").addEventListener("click", () =>
 
 document.addEventListener("DOMContentLoaded", () => {
     const finalScore = localStorage.getItem("finalScore");
-    if (finalScore) {
+    const wordLog = localStorage.getItem("wordLog");
+
+    if (finalScore && wordLog) {
         document.getElementById("text-content").innerText = `Final Score: ${finalScore}`;
+        document.getElementById("word-log").innerText = wordLog;
+    } else {
+        document.getElementById("word-log").style.display = "none";
+        document.getElementById("log-box").style.display = "none";
     }
+
+    localStorage.removeItem("finalScore");
+    localStorage.removeItem("wordLog");
 });

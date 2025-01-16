@@ -10,7 +10,7 @@ may contain duplicates.
 ## Extended Mode
 This mode allows repetition; players can form longer words that yield more points, and thereby reach higher scores. The letters are guaranteed to be distinct.
 
-## Chaos Mode
+## Challenge Mode
 Like Extended Mode, this mode allows repetition and guarantees a distinct set of letters. However, the selection of letters will change after every valid submission.
 
 # Project Description

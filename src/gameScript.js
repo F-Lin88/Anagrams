@@ -18,24 +18,24 @@ async function fetchDictionary() {
 /// generates numLetters random letters as a single string
 function genLetters() {
     // skew the alphabet letter frequencies for better anagram combinations
-    const alphabet = "aaabbccddeeeeeeffghiiijkklllmmnnnooooppqrrrsssttttuuvwwxyyz"
+    let alphabet = "aaabbccddeeeeeeffghiiijkklllmmnnnooooppqrrrsssttttuuvwwxyyz"
 
     let letters = "";
     for (let i = 0; i < numLetters; i++) {
         let newLetter = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-        // ensure letters are distinct in Extended mode
-        while (mode !== "normal" && letters.includes(newLetter)) {
-            newLetter = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-        }
+        // ensure letters are distinct in Extended/Challenge mdoe
+        alphabet = alphabet.replaceAll("" + newLetter, "");
         letters += newLetter;
     }
 
+    writeToLog(`Your Letters Are: ${letters.toUpperCase()}\n`);
     return letters;
 }
 
 /// initialises the game 
 function initGame() {
     document.getElementById("header").innerText = `ANAGRAMS: ${mode.toUpperCase()}`;
+    writeToLog("Game Start!\n");
 
     score = 0;
     usedWords = new Set();
@@ -49,7 +49,6 @@ function initGame() {
     document.getElementById("word-input").focus();
 
     startTimer();
-    writeToLog("Game Start!\n");
 }
 
 /// creates and returns a HashMap frequency table for the letters of string s
@@ -141,6 +140,8 @@ async function calculateWordScore(word) {
 /// terminates the round
 function endGame() {
     localStorage.setItem("finalScore", score);
+    const log = document.getElementById("word-log").innerText;
+    localStorage.setItem("wordLog", log);
     window.location.href = "../index.html";
 }
 

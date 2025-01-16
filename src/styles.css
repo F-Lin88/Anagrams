@@ -45,6 +45,7 @@ body {
 #word-log {
     max-height: 450px;
     overflow-y: auto;
+    visibility: visible;
 }
 
 pre {
