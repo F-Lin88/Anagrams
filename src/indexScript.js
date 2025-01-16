@@ -1,7 +1,8 @@
 function onButtonClick(mode) {
     localStorage.setItem("numLetters", parseInt(document.getElementById("num-letters").value));
     localStorage.setItem("numSeconds", parseInt(document.getElementById("num-seconds").value));
-    window.location.href = `game.html?mode=${mode}`;
+    // NOTE: links are relative to the location of the html file running the script, not the script itself
+    window.location.href = `src/game.html?mode=${mode}`;
 }
 
 document.getElementById("normal-game-button").addEventListener("click", () => {

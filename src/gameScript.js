@@ -27,7 +27,6 @@ function genLetters() {
         while (mode !== "normal" && letters.includes(newLetter)) {
             newLetter = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
         }
-        console.log(alphabet);
         letters += newLetter;
     }
 
@@ -142,7 +141,7 @@ async function calculateWordScore(word) {
 /// terminates the round
 function endGame() {
     localStorage.setItem("finalScore", score);
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
 }
 
 /// helper function to write a msg to the log
@@ -150,9 +149,7 @@ function writeToLog(message) {
     const logElem = document.getElementById("word-log");
     logElem.innerText += message + "\n";
 
-    setTimeout(() => {
-        logElem.scrollTop = logElem.scrollHeight;
-    }, 10);
+    logElem.scrollTop = logElem.scrollHeight;
 }
 
 document.getElementById("end-game").addEventListener("click", endGame);
