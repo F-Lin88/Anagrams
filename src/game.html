@@ -1,0 +1,30 @@
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Play Anagrams</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="flex-wrapper">
+        <div class="container">
+            <h1 id="header">ANAGRAMS</h1>
+            <p id="timer">Timer: 45s</p>
+            <p id="score">Score: 0</p>
+            
+            <div class="game-area">
+                <div id="letters-container">
+                    <p id="letters">_ _ _ _ _ _</p>
+                </div>
+                <input type="text" id="word-input" placeholder="Enter words here!" autocomplete="off">
+                <button id="submit-word">Submit</button>
+                <button id="end-game">End</button>
+            </div>
+        </div>
+    
+        <div class="log-container">
+            <div id="word-log" style="white-space: pre-wrap"></div>
+        </div>
+    </div>
+
+    <script src="gameScript.js"></script>
+</body>
