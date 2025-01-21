@@ -14,7 +14,7 @@ This mode allows repetition; players can form longer words that yield more point
 Like Extended Mode, this mode allows repetition and guarantees a distinct set of letters. However, the selection of letters will change after every valid submission.
 
 # Project Description
-A simple static website project through which I developed my front-end coding skills. This project is wholly composed using HTML, CSS and JavaScript.
+A simple project through which I developed my front-end coding skills. This project is wholly composed using HTML, CSS and JavaScript.
 
 ## Credits
 The [English dictionary](src/words.json) used for this game was obtained from [dwyl's GitHub](https://github.com/dwyl/english-words), and slightly

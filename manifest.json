@@ -1,0 +1,11 @@
+{
+    "name": "Anagraminator",
+    "description": "Anagram game with 3 modes",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["storage"],
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "imgs/icon.PNG"
+    }
+  }
