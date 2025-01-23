@@ -1,7 +1,9 @@
 # The Game
 A simple Anagrams game! Users will form as many words as they can from a randomly selected set of letters within a time limit.
 Users can select 30s, 45s or 60s rounds with 6, 7, 8 or 9 letters, and can choose from 3 different game modes. A running log 
-is available in each game, tracking what words have been submitted, and the points earnt from them.
+is available in each game, tracking what words have been submitted, and the points earnt from them. Additionally features an
+Anagram solver that will find all words that can be formed from a set of 0-9 letters. The results are displayed in order of
+decreasing length.
 
 Available as a [static website](https://felix-lin-8864.github.io/Anagrams/) hosted on GitHub Pages, or install it as a Chrome Extension [here](https://chromewebstore.google.com/detail/anagraminator/ojimpjlldmgoalicgndlagglgemfncaa). If you enjoy the Chrome Extension, please leave a review!
 

@@ -8,8 +8,9 @@ async function solve() {
     
     // longer than 9 takes too long to run
     // perhaps change validation method to iterating over dictionary as 500k < 10!
-    if (letters.length > 9) {
+    if (letters.length < 1 || letters.length > 9) {
         wordInput.value = "";
+        wordsContainer.innerText = "Please enter 1-9 letters";
         return;
     }
 
