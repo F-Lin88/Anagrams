@@ -1,4 +1,4 @@
-function onButtonClick(mode) {
+function onGameModeClick(mode) {
     localStorage.setItem("numLetters", parseInt(document.getElementById("num-letters").value));
     localStorage.setItem("numSeconds", parseInt(document.getElementById("num-seconds").value));
     // NOTE: links are relative to the location of the html file running the script, not the script itself
@@ -6,15 +6,19 @@ function onButtonClick(mode) {
 }
 
 document.getElementById("normal-game-button").addEventListener("click", () => {
-    onButtonClick("normal");
+    onGameModeClick("normal");
 });
 
 document.getElementById("extended-game-button").addEventListener("click", () => {
-    onButtonClick("extended");
+    onGameModeClick("extended");
 });
 
 document.getElementById("challenge-game-button").addEventListener("click", () => {
-    onButtonClick("challenge");
+    onGameModeClick("challenge");
+});
+
+document.getElementById("solver-button").addEventListener("click", () => {
+    window.location.href = "src/solver.html";
 });
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -10,36 +10,46 @@
 			<h1>ANAGRAMS</h1>
 			<p id="text-content">Form as many English words as you can from the given letters!</p>
 	
-			<div class="tooltip">
-				<button id="normal-game-button">Normal</button>
-				<span class="tooltiptext">The standard game! Each of the given letters can only be used once in a word!</span>
-			</div>
-	
-			<div class="tooltip">
-				<button id="extended-game-button">Extended</button>
-				<span class="tooltiptext">Use each of the given letters freely! Form longer words and reach higher scores!</span>
-			</div>
+			<div style="display: flex; justify-self: center; flex-direction: column; gap: 10px;">
+				<div style="display: flex; justify-self: center; flex-direction: row; gap: 3.5px;">
+					<div class="tooltip">
+						<button id="normal-game-button">Normal</button>
+						<span class="tooltiptext">The standard game! Each of the given letters can only be used once in a word!</span>
+					</div>
 			
-			<div class="tooltip">
-				<button id="challenge-game-button">Challenge</button>
-				<span class="tooltiptext">Extended Mode, but the letters change after every valid submission! Have fun!</span>
+					<div class="tooltip">
+						<button id="extended-game-button">Extended</button>
+						<span class="tooltiptext">Use each of the given letters freely! Form longer words and reach higher scores!</span>
+					</div>
+					
+					<div class="tooltip">
+						<button id="challenge-game-button">Challenge</button>
+						<span class="tooltiptext">Extended Mode, but the letters change after every valid submission! Have fun!</span>
+					</div>
+					
+					<div id="tooltip" style="display:none"></div>
+				</div>
+
+				<div>
+					<select id="num-letters">
+						<option value="6">6 letters</option>
+						<option value="7">7 letters</option>
+						<option value="8">8 letters</option>
+						<option value="9">9 letters</option>
+					</select>
+					
+					<select id="num-seconds">
+						<option value="60">60s</option>
+						<option value="45">45s</option>
+						<option value="30">30s</option>
+					</select>
+				</div>
+	
+				<div class="tooltip">
+					<button id="solver-button">Solver</button>
+					<span class="tooltiptext">Finds all words that can be formed from a set of 6-9 letters in Normal Mode</span>
+				</div>
 			</div>
-	
-			<select id="num-letters">
-				<option value="6">6 letters</option>
-				<option value="7">7 letters</option>
-				<option value="8">8 letters</option>
-				<option value="9">9 letters</option>
-			</select>
-	
-			<select id="num-seconds">
-				<option value="60">60s</option>
-				<option value="45">45s</option>
-				<option value="30">30s</option>
-			</select>
-	
-			<div id="tooltip" style="display:none"></div>
-	
 		</div>
 	
 		<div id="log-box" class="log-container">

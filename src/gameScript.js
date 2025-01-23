@@ -107,7 +107,7 @@ async function submitWord() {
 }
 
 /// calculates the number of points a word is worth;
-/// 0 if invalid, floor(length * 1.5) * 175
+/// 0 if invalid, length * length * 175 otherwise
 async function calculateWordScore(word) {
     if (!word || usedWords.has(word)
         || (mode === "normal" && word.length > numLetters)
@@ -134,7 +134,7 @@ async function calculateWordScore(word) {
     
     // validate English word, and reward longer words more
     const dictionary = await fetchDictionary();
-    return dictionary[word] ? Math.floor(1.5* word.length) * 175: 0;
+    return dictionary[word] ? word.length * word.length * 175 : 0;
 }
 
 /// terminates the round
@@ -142,6 +142,7 @@ function endGame() {
     localStorage.setItem("finalScore", score);
     const log = document.getElementById("word-log").innerText;
     localStorage.setItem("wordLog", log);
+    localStorage.setItem("letters", currLetters);
     window.location.href = "../index.html";
 }
 
@@ -155,7 +156,7 @@ function writeToLog(message) {
 
 document.getElementById("end-game").addEventListener("click", endGame);
 
-// users can submit by clicking the button or pressing enter
+// users can submit by clicking the "Submit" button or pressing enter
 document.getElementById("submit-word").addEventListener("click", submitWord);
 document.getElementById("word-input").addEventListener("keypress", function(e) {
     if (e.key === "Enter") {
