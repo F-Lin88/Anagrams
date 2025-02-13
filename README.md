@@ -1,27 +1,53 @@
-# The Game
-A simple Anagrams game! Users will form as many words as they can from a randomly selected set of letters within a time limit.
-Users can select 30s, 45s or 60s rounds with 6, 7, 8 or 9 letters, and can choose from 3 different game modes. A running log 
-is available in each game, tracking what words have been submitted, and the points earnt from them. Additionally features an
-Anagram solver that will find all words that can be formed from a set of 0-9 letters. The results are displayed in order of
-decreasing length.
+# Anagraminator
+[![icon](https://i.imgur.com/5fo9rDs.png)](https://chromewebstore.google.com/detail/anagraminator/ojimpjlldmgoalicgndlagglgemfncaa)
 
-Available as a [static website](https://felix-lin-8864.github.io/Anagrams/) hosted on GitHub Pages, or install it as a Chrome Extension [here](https://chromewebstore.google.com/detail/anagraminator/ojimpjlldmgoalicgndlagglgemfncaa). If you enjoy the Chrome Extension, please leave a review!
+## The Project
 
-## Normal Mode
-This mode offers the classic game; form as many words as you can from the given letters, without repetition. The selection of letters
-may contain duplicates.
+### Aim
+Primary Aim: To deploy a static, single-player web game, and learn/develop basic frontend coding skills.
 
-## Extended Mode
-This mode allows repetition; players can form longer words that yield more points, and thereby reach higher scores. The letters are guaranteed to be distinct.
+Secondary Aim: Play Anagrams!
 
-## Challenge Mode
-Like Extended Mode, this mode allows repetition and guarantees a distinct set of letters. However, the selection of letters will change after every valid submission.
+### Composition 
+![JS](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 
-# Project Description
-A simple project through which I developed my front-end coding skills. This project is wholly composed using HTML, CSS and JavaScript.
+This project is a simple static web game composed in JavaScript, HTML and CSS. The MDN web/window API is used for basic persistance of game configs, and to redirect players to different pages.
 
-## Credits
-The [English dictionary](src/words.json) used for this game was obtained from [dwyl's GitHub](https://github.com/dwyl/english-words), and slightly
-altered to remove ethnic slurs.
+### Deployment
+This project is deployed as both a public chrome extension and website hosted on GitHub pages. These endpoints were chosen to maximise the game's exposure and accessibility, whilst balancing cost; Chrome Developer account incurs a minor fee, but published extensions are available to anyone with a Chrome account and easy to install; GitHub pages is a free hosting avenue for static websites that is accessible to all on the web.
 
-Online resources, such as StackOverflow and w3schools, assisted in my programming and debugging of this project.
+Initially, the first version of this project was also deployed using Vercel, but releases using vercel was discontinued as their cloud and database services were unnecessary, and users required a Vercel account for access.
+
+### Links
+- [GitHub Repo](https://github.com/Felix-Lin-8864/Anagrams)
+- [GitHub Pages](https://felix-lin-8864.github.io/Anagrams/)
+- [Chrome Webstore Listing](https://chromewebstore.google.com/detail/anagraminator/ojimpjlldmgoalicgndlagglgemfncaa)
+- [English Dictionary (words.json)](https://github.com/dwyl/english-words)
+- [Vercel Release (Legacy)](https://anagrams-g5bvavqo8-felixs-projects-6fe04eba.vercel.app/)
+
+## The Game
+
+A simple single-player anagrams game:
+- Form as many words as you can from a randomly generated set of N letters within the chosen time limit; points awarded scale with word length
+- Select the number of letters N in (6..=9), time limit (30, 45, 60)
+- Select from Normal, Extended and Challenge game modes
+
+### Normal Mode
+![Normal Mode](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2wzcjZ2ZXU3aWhtc3NnN2lqaHMyMWM1bHNoemxxMGgzcHF3dDMwaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KXvctGvfYrDNGCYyBS/giphy.gif)
+
+Cannot repeat letters to form words, but generated set may contain duplicates.
+
+### Extended Mode
+![Extended Mode](https://media.giphy.com/media/k7YkkGi8w2cVE1zXRX/giphy.gif)
+
+Can repeat letters to form words, and letters in the generated set are guranteed to be unique.
+
+### Challenge Mode
+![Challenge Mode](https://media.giphy.com/media/BA0ippG26rMS5jMYVE/giphy.gif)
+
+Extended Mode, but new letters are generated after every valid submission.
+
+### Solver
+![Solver](https://media.giphy.com/media/rc3Xh6ZCBrsqaMSKVq/giphy.gif)
+
+Enter up to 9 letters, and the solver will list all words that can be formed from them in Normal Mode, ordered by decreasing length.
